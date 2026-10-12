@@ -5,7 +5,7 @@ import path from "path"
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: './', // Yeh zaroor change karein
+  base: '/Surgical-Beauty-Store/', // Yeh repository name set karein
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "."),
