@@ -5,7 +5,7 @@ import path from "path"
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/ASH-Beauty-Store/',
+  base: './', // Yeh change kar dein
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "."),
