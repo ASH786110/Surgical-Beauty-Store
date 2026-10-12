@@ -5,7 +5,7 @@ import path from "path"
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/Surgical-Beauty-Store/', // Yeh repository name set karein
+  base: "", // Isay khali (empty) chhor dein
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "."),
