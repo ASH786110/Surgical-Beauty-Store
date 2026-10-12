@@ -1,0 +1,6 @@
+{
+  "name": "Agency Hero & Contact",
+  "description": "High-converting agency landing page with hero-01 section, responsive navigation, brand slider, and contact form built with shadcn/ui.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
