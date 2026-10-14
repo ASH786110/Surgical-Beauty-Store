@@ -33,7 +33,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 44.0,
     salonPrice: 38.0,
     wholesalePrice: 34.0,
-    image: "/src/assets/images/product_micro_needle_holder_1791527347532.jpg",
+    image: "./src/assets/images/product_micro_needle_holder_1791527347532.jpg",
     quote: "Official hospital operating theater grade. Pyramid cross-serrated Tungsten Carbide jaws with ratchet lock for zero suture slippage. ISO 13485 & CE certified.",
     waText: "Hello ASH Instruments, I want to order the Mayo-Hegar TC Needle Holder (REF: ASH-SURG-001) at official factory export rates.",
   },
@@ -48,7 +48,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 46.0,
     salonPrice: 40.0,
     wholesalePrice: 36.0,
-    image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+    image: "./src/assets/images/product_cuticle_nippers_1791528938526.jpg",
     quote: "Precision dental extraction cutlery. Deep anatomical beak cross-serrations maximize root contact while preserving alveolar bone architecture.",
     waText: "Hello ASH Instruments, I want to order the Dental Extraction Forceps #150 (REF: ASH-DENT-101) at official factory rates.",
   },
@@ -63,7 +63,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 68.0,
     salonPrice: 58.0,
     wholesalePrice: 52.0,
-    image: "/src/assets/images/product_metzenbaum_scissors_1791527358012.jpg",
+    image: "./src/assets/images/product_ash_cuticle_nippers_1791531992141.jpg",
     quote: "Ophthalmic microsurgical standard for 6-0 down to 10-0 corneal sutures. Ultra-fine Tungsten Carbide inserts with feather-touch catch mechanism.",
     waText: "Hello ASH Instruments, I want to order the Castroviejo Micro Needle Holder (REF: ASH-EYE-201) at official factory rates.",
   },
@@ -78,7 +78,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 36.0,
     salonPrice: 32.0,
     wholesalePrice: 28.0,
-    image: "/src/assets/images/ash_lash_realistic_1791623278329.jpg",
+    image: "./src/assets/images/ash_lash_realistic_1791623278329.jpg",
     quote: "Original ASH Instruments laser engraved 90° tweezers. Micro-textured diamond fiber sweet-spot grabs 0.03mm Russian volume fans with zero slippage.",
     waText: "Hello ASH Instruments, I want to order the 90° Fiber-Tip Mega Volume Tweezers (REF: ASH-LASH-090) at official export rates.",
   },
@@ -93,7 +93,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 33.0,
     salonPrice: 29.0,
     wholesalePrice: 26.0,
-    image: "/src/assets/images/ash_nipper_realistic_1791623359819.jpg",
+    image: "./src/assets/images/ash_nipper_realistic_1791623359819.jpg",
     quote: "Hand-honed beveled razor edge aligned under 20x stereo microscope for surgical clean trimming with zero skin pinching.",
     waText: "Hello ASH Instruments, I want to order the Pro Cobalt Cuticle Nipper 4mm (REF: ASH-MANI-404) at official export rates.",
   },
@@ -108,7 +108,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 139.0,
     salonPrice: 125.0,
     wholesalePrice: 110.0,
-    image: "/src/assets/images/ash_shears_realistic_1791623537885.jpg",
+    image: "./src/assets/images/ash_shears_realistic_1791623537885.jpg",
     quote: "Titanium black nitride molecular PVD coating with 360° rotating ergonomic thumb ring and jeweled tension pivot.",
     waText: "Hello ASH Instruments, I want to order the Titanium Swivel Barber Shears 6.5\" (REF: ASH-HAIR-750) at official export rates.",
   },
@@ -139,7 +139,7 @@ export default function Hero() {
       {/* Background High-End Studio Presentation */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg"
+          src="./src/assets/images/hero_ash_instruments_tray_1791532125541.jpg"
           alt="Authentic surgical-grade instruments on stainless inspection tray"
           className="h-full w-full object-cover object-center opacity-20"
           referrerPolicy="no-referrer"

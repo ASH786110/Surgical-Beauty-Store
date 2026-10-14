@@ -2,7 +2,7 @@ export interface BeautyInstrument {
   id: string
   ref: string
   name: string
-  category: 
+  category:
     | "General Surgery"
     | "Dental Instruments"
     | "Eye / Ophthalmic"
@@ -39,7 +39,7 @@ export interface BeautyInstrument {
 
 export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
   // =========================================================================
-  // SECTION 1: GENERAL SURGERY INSTRUMENTS (SURGICAL GRADE GERMAN STAINLESS)
+  // SECTION 1: GENERAL SURGERY INSTRUMENTS (100% UNIQUE IMAGES)
   // =========================================================================
   {
     id: "surg-mayo-hegar-tc",
@@ -58,7 +58,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 142,
-    image: "/src/assets/images/product_micro_needle_holder_1791527347532.jpg",
+    image: "./src/assets/images/product_micro_needle_holder_1791527347532.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.90 (Medical Surgical Instruments)",
     description:
@@ -94,7 +94,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 98,
-    image: "/src/assets/images/product_metzenbaum_scissors_1791527358012.jpg",
+    image: "./src/assets/images/product_metzenbaum_scissors_1791527358012.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.90 (Surgical Scissors)",
     description:
@@ -130,7 +130,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 116,
-    image: "/src/assets/images/product_debakey_forceps_1791527369797.jpg",
+    image: "./src/assets/images/product_debakey_forceps_1791527369797.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.90 (Surgical Hemostatic Forceps)",
     description:
@@ -166,7 +166,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 77,
-    image: "/src/assets/images/hero_surgical_instruments_1791527335093.jpg",
+    image: "./src/assets/images/hero_surgical_instruments_1791527335093.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.90 (Surgical Grasping Forceps)",
     description:
@@ -202,7 +202,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.8,
     reviewCount: 88,
-    image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+    image: "./src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.90 (Surgical Scalpel Handles)",
     description:
@@ -223,7 +223,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
   },
 
   // =========================================================================
-  // SECTION 2: DENTAL INSTRUMENTS (CLINICAL & PERIODONTAL GRADE)
+  // SECTION 2: DENTAL INSTRUMENTS (100% UNIQUE IMAGES)
   // =========================================================================
   {
     id: "dent-extracting-forceps-150",
@@ -242,7 +242,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 68,
-    image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+    image: "./src/assets/images/product_cuticle_nippers_1791528938526.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.49 (Dental Extraction Forceps)",
     description:
@@ -278,7 +278,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 92,
-    image: "/src/assets/images/product_micro_needle_holder_1791527347532.jpg",
+    image: "./src/assets/images/hero_beauty_instruments_1791528917414.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.49 (Dental Prophylaxis Instruments)",
     description:
@@ -314,7 +314,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.8,
     reviewCount: 105,
-    image: "/src/assets/images/hero_surgical_instruments_1791527335093.jpg",
+    image: "./src/assets/images/manicure_nail_pusher_1791538351568.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.49 (Dental Mirrors)",
     description:
@@ -350,7 +350,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 64,
-    image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+    image: "./src/assets/images/ash_cuticle_pusher_1791621369040.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.49 (Dental Luxators & Elevators)",
     description:
@@ -371,7 +371,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
   },
 
   // =========================================================================
-  // SECTION 3: EYE / OPHTHALMIC INSTRUMENTS (MICROSURGERY GRADE)
+  // SECTION 3: EYE / OPHTHALMIC INSTRUMENTS (100% UNIQUE IMAGES)
   // =========================================================================
   {
     id: "eye-castroviejo-needle-holder",
@@ -390,7 +390,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 71,
-    image: "/src/assets/images/product_micro_needle_holder_1791527347532.jpg",
+    image: "./src/assets/images/product_ash_cuticle_nippers_1791531992141.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.50 (Ophthalmic Microsurgery Instruments)",
     description:
@@ -426,7 +426,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 84,
-    image: "/src/assets/images/product_metzenbaum_scissors_1791527358012.jpg",
+    image: "./src/assets/images/ash_scissors_realistic_1791623595411.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.50 (Ophthalmic Scissors)",
     description:
@@ -462,7 +462,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 63,
-    image: "/src/assets/images/product_debakey_forceps_1791527369797.jpg",
+    image: "./src/assets/images/ash_curved_isolation_1791621484253.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.50 (Ophthalmic Micro Forceps)",
     description:
@@ -498,7 +498,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.8,
     reviewCount: 52,
-    image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+    image: "./src/assets/images/curved_isolation_tweezer_satin_1791540284620.jpg",
     noCertificateNeeded: false,
     hsCode: "HS 9018.50 (Ophthalmic Eye Speculum)",
     description:
@@ -519,7 +519,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
   },
 
   // =========================================================================
-  // SECTION 4: BEAUTY & SALON INSTRUMENTS (EXPORT MASTER ATELIER)
+  // SECTION 4: BEAUTY & SALON INSTRUMENTS (100% UNIQUE IMAGES)
   // =========================================================================
   {
     id: "lash-fiber-90",
@@ -538,7 +538,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 94,
-    image: "/src/assets/images/ash_lash_realistic_1791623278329.jpg",
+    image: "./src/assets/images/ash_lash_realistic_1791623278329.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8203.20 (Cosmetic Cutlery)",
     description:
@@ -574,7 +574,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 112,
-    image: "/src/assets/images/ash_nipper_realistic_1791623359819.jpg",
+    image: "./src/assets/images/ash_nipper_realistic_1791623359819.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8214.20 (Manicure Implements)",
     description:
@@ -610,7 +610,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 56,
-    image: "/src/assets/images/ash_shears_realistic_1791623537885.jpg",
+    image: "./src/assets/images/ash_shears_realistic_1791623537885.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8213.00 (Barber Cutlery)",
     description:
@@ -646,7 +646,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 89,
-    image: "/src/assets/images/ash_tweezer_realistic_1791623652933.jpg",
+    image: "./src/assets/images/ash_tweezer_realistic_1791623652933.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8203.20 (Cosmetic Tweezers)",
     description:
@@ -682,7 +682,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 83,
-    image: "/src/assets/images/ash_scissors_realistic_1791623595411.jpg",
+    image: "./src/assets/images/ash_russian_scissors_1791621233925.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8213.00 (Nail & Cuticle Scissors)",
     description:
@@ -718,7 +718,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 68,
-    image: "/src/assets/images/ash_damascus_razor_1791621275630.jpg",
+    image: "./src/assets/images/ash_damascus_razor_1791621275630.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8212.10 (Barber Cutlery & Razors)",
     description:
@@ -754,7 +754,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 5.0,
     reviewCount: 78,
-    image: "/src/assets/images/ash_satin_hair_shear_1791621562584.jpg",
+    image: "./src/assets/images/ash_satin_hair_shear_1791621562584.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8213.00 (Hairdressing Shears)",
     description:
@@ -790,7 +790,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 52,
-    image: "/src/assets/images/ash_toenail_nipper_1791621317729.jpg",
+    image: "./src/assets/images/ash_toenail_nipper_1791621317729.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8214.20 (Pedicure Tools)",
     description:
@@ -826,7 +826,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 91,
-    image: "/src/assets/images/ash_cuticle_pusher_1791621369040.jpg",
+    image: "./src/assets/images/hero_beauty_instruments_1791530566316.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8214.20 (Manicure Implements)",
     description:
@@ -862,7 +862,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.8,
     reviewCount: 44,
-    image: "/src/assets/images/ash_thinning_shears_1791621420987.jpg",
+    image: "./src/assets/images/ash_thinning_shears_1791621420987.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8213.00 (Hairdressing Shears)",
     description:
@@ -898,7 +898,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.8,
     reviewCount: 65,
-    image: "/src/assets/images/ash_curved_isolation_1791621484253.jpg",
+    image: "./src/assets/images/ash_black_tweezer_1791621197516.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8203.20 (Cosmetic Tweezers)",
     description:
@@ -934,7 +934,7 @@ export const BEAUTY_INSTRUMENTS: BeautyInstrument[] = [
     inStock: true,
     rating: 4.9,
     reviewCount: 97,
-    image: "/src/assets/images/ash_comedone_extractor_1791621636128.jpg",
+    image: "./src/assets/images/ash_comedone_extractor_1791621636128.jpg",
     noCertificateNeeded: true,
     hsCode: "HS 8203.20 (Skin Implements)",
     description:
