@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { ShoppingBag, MessageCircle, Menu, X } from "lucide-react"
+import { ShoppingBag, MessageCircle, Menu, X, ChevronDown, Stethoscope, Sparkles } from "lucide-react"
 import { useCart } from "@/src/context/CartContext"
 import { Button } from "@/components/ui/button"
 
@@ -10,19 +10,31 @@ interface NavbarProps {
 export default function Navbar({ onOpenAdmin }: NavbarProps) {
   const { totalCount, setIsCartOpen } = useCart()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [deptDropdownOpen, setDeptDropdownOpen] = useState(false)
 
   const handleScroll = (id: string) => {
     setMobileMenuOpen(false)
+    setDeptDropdownOpen(false)
     const el = document.getElementById(id)
     if (el) {
       el.scrollIntoView({ behavior: "smooth" })
     }
   }
 
+  const handleSelectDepartment = (dept: string) => {
+    setMobileMenuOpen(false)
+    setDeptDropdownOpen(false)
+    window.dispatchEvent(new CustomEvent("ash-filter-category", { detail: dept }))
+    const el = document.getElementById("catalog")
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-amber-500/15 bg-[#080c16]/95 backdrop-blur-xl">
+    <nav className="w-full bg-[#080c16]/98 backdrop-blur-xl border-b border-amber-500/15">
       {/* Main Header */}
-      <div className="mx-auto max-w-7xl flex h-16 items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Zone 1: Official ASH Emblem + Wordmark */}
         <a
           href="#"
@@ -36,82 +48,79 @@ export default function Navbar({ onOpenAdmin }: NavbarProps) {
             <img
               src="/src/assets/images/logo_ash_instruments_1791532110951.jpg"
               alt="ASH Instruments Official Logo"
-              className="h-9 w-9 rounded-full border border-amber-400/30 object-cover transition-transform duration-200 group-hover:scale-105"
+              className="h-10 w-10 rounded-full border border-amber-400/40 object-cover transition-transform duration-200 group-hover:scale-105 shadow-sm"
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold tracking-wider text-sm leading-tight text-white group-hover:text-amber-200 transition-colors">
-              ASH INSTRUMENTS
-            </span>
+            <div className="flex items-center gap-1.5">
+              <span className="font-extrabold tracking-wider text-sm sm:text-base leading-tight text-white group-hover:text-amber-200 transition-colors">
+                ASH INSTRUMENTS
+              </span>
+              <span className="hidden sm:inline-block px-1.5 py-0.2 rounded text-[9px] font-mono font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+                OFFICIAL
+              </span>
+            </div>
             <span className="text-[10px] text-amber-300/80 font-semibold tracking-widest uppercase">
-              Askari Surgical Hubs
+              Askari Surgical Hubs · Est. Sialkot
             </span>
           </div>
         </a>
 
-        {/* Zone 2: Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-300">
-          <a
-            href="#catalog"
-            onClick={(e) => {
-              e.preventDefault()
-              handleScroll("catalog")
-            }}
-            className="hover:text-amber-200 transition-colors whitespace-nowrap shrink-0"
+        {/* Zone 2: Navigation Links with Departments */}
+        <div className="hidden lg:flex items-center gap-5 text-xs font-semibold uppercase tracking-wider text-slate-300">
+          {/* Department Quick Filter Tabs */}
+          <button
+            onClick={() => handleSelectDepartment("General Surgery")}
+            className="hover:text-amber-300 transition-colors flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-slate-800/60"
           >
-            Catalog
-          </a>
-          <a
-            href="#finishes"
-            onClick={(e) => {
-              e.preventDefault()
-              handleScroll("finishes")
-            }}
-            className="hover:text-amber-200 transition-colors whitespace-nowrap shrink-0"
+            <span>General Surgery</span>
+          </button>
+
+          <button
+            onClick={() => handleSelectDepartment("Dental Instruments")}
+            className="hover:text-amber-300 transition-colors flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-slate-800/60"
           >
-            Steel Finishes
-          </a>
-          <a
-            href="#categories"
-            onClick={(e) => {
-              e.preventDefault()
-              handleScroll("categories")
-            }}
-            className="hover:text-amber-200 transition-colors whitespace-nowrap shrink-0"
+            <span>Dental</span>
+          </button>
+
+          <button
+            onClick={() => handleSelectDepartment("Eye / Ophthalmic")}
+            className="hover:text-amber-300 transition-colors flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-slate-800/60"
           >
-            Categories
-          </a>
+            <span>Eye Instruments</span>
+          </button>
+
+          <button
+            onClick={() => handleSelectDepartment("Beauty & Salon")}
+            className="hover:text-amber-300 transition-colors flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-slate-800/60"
+          >
+            <span>Beauty & Salon</span>
+          </button>
+
+          <div className="h-4 w-px bg-white/10" />
+
           <a
             href="#quality"
             onClick={(e) => {
               e.preventDefault()
               handleScroll("quality")
             }}
-            className="hover:text-amber-200 transition-colors whitespace-nowrap shrink-0"
+            className="hover:text-amber-200 transition-colors"
           >
             Quality & OEM
           </a>
-          <a
-            href="#testimonials"
-            onClick={(e) => {
-              e.preventDefault()
-              handleScroll("testimonials")
-            }}
-            className="hover:text-amber-200 transition-colors whitespace-nowrap shrink-0"
-          >
-            Reviews
-          </a>
+
           <a
             href="#wholesale"
             onClick={(e) => {
               e.preventDefault()
               handleScroll("wholesale")
             }}
-            className="hover:text-amber-200 transition-colors whitespace-nowrap shrink-0"
+            className="hover:text-amber-200 transition-colors"
           >
             Wholesale Desk
           </a>
-        </nav>
+        </div>
 
         {/* Zone 3: Direct Actions (Order Tray Bag & WhatsApp Direct) */}
         <div className="flex items-center gap-3 shrink-0">
@@ -133,7 +142,7 @@ export default function Navbar({ onOpenAdmin }: NavbarProps) {
 
           {/* Quick WhatsApp Inquiry CTA */}
           <a
-            href="https://wa.me/923497560980?text=Hello%20ASH%20Instruments%2C%20I%20am%20interested%20in%20ordering%20beauty%20instruments%20at%20direct%20factory%20rates."
+            href="https://wa.me/923497560980?text=Hello%20ASH%20Instruments%2C%20I%20am%20interested%20in%20ordering%20surgical%2C%20dental%2C%20ophthalmic%2C%20and%20beauty%20instruments%20at%20official%20factory%20rates."
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex"
@@ -160,42 +169,48 @@ export default function Navbar({ onOpenAdmin }: NavbarProps) {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-amber-500/15 bg-[#080c16]/98 px-4 py-4 space-y-3">
-          <div className="flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-slate-300">
+          <div className="text-[11px] font-mono uppercase text-amber-300 font-bold tracking-wider mb-2">
+            Departments & Instruments
+          </div>
+          <div className="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-200">
             <button
-              onClick={() => handleScroll("catalog")}
-              className="text-left py-2 hover:text-amber-200"
+              onClick={() => handleSelectDepartment("General Surgery")}
+              className="text-left p-2.5 rounded-lg bg-slate-900/90 border border-white/10 hover:border-amber-400/40 hover:text-amber-200"
             >
-              Catalog & Products
+              🩺 General Surgery
             </button>
             <button
-              onClick={() => handleScroll("finishes")}
-              className="text-left py-2 hover:text-amber-200"
+              onClick={() => handleSelectDepartment("Dental Instruments")}
+              className="text-left p-2.5 rounded-lg bg-slate-900/90 border border-white/10 hover:border-amber-400/40 hover:text-amber-200"
             >
-              Steel Finishes Metallurgy
+              🦷 Dental Tools
             </button>
             <button
-              onClick={() => handleScroll("categories")}
-              className="text-left py-2 hover:text-amber-200"
+              onClick={() => handleSelectDepartment("Eye / Ophthalmic")}
+              className="text-left p-2.5 rounded-lg bg-slate-900/90 border border-white/10 hover:border-amber-400/40 hover:text-amber-200"
             >
-              Categories & Tools
+              👁️ Eye Microsurgery
             </button>
+            <button
+              onClick={() => handleSelectDepartment("Beauty & Salon")}
+              className="text-left p-2.5 rounded-lg bg-slate-900/90 border border-white/10 hover:border-amber-400/40 hover:text-amber-200"
+            >
+              ✂️ Beauty & Salon
+            </button>
+          </div>
+
+          <div className="pt-2 border-t border-white/[0.08] flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-slate-300">
             <button
               onClick={() => handleScroll("quality")}
-              className="text-left py-2 hover:text-amber-200"
+              className="text-left py-1.5 hover:text-amber-200"
             >
-              Quality & OEM Guarantee
-            </button>
-            <button
-              onClick={() => handleScroll("testimonials")}
-              className="text-left py-2 hover:text-amber-200"
-            >
-              Verified Reviews
+              Quality & DIN/ISO Certifications
             </button>
             <button
               onClick={() => handleScroll("wholesale")}
-              className="text-left py-2 hover:text-amber-200"
+              className="text-left py-1.5 hover:text-amber-200"
             >
-              Wholesale Inquiry
+              Wholesale Inquiry & OEM Desk
             </button>
           </div>
 
@@ -214,6 +229,6 @@ export default function Navbar({ onOpenAdmin }: NavbarProps) {
           </div>
         </div>
       )}
-    </header>
+    </nav>
   )
 }

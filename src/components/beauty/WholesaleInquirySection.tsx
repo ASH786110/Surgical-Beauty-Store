@@ -74,7 +74,7 @@ export default function WholesaleInquirySection() {
               Partner with <span className="gold-gradient-text">Askari Surgical Hubs</span>
             </h2>
             <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
-              Whether you are an independent lash artist looking for top-tier tweezers or a beauty school ordering student kits in bulk, we provide competitive factory direct prices and swift support.
+              Direct factory manufacturer and exporter of General Surgery, Dental, Ophthalmic, and Beauty Cutlery based in Sialkot, Pakistan. Supplying clinics, surgical distributors, hospitals, and salon academies worldwide with competitive factory rates and door-to-door air freight.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -255,12 +255,14 @@ export default function WholesaleInquirySection() {
                         onChange={(e) => setFormData({ ...formData, productInterest: e.target.value })}
                         className="w-full text-xs bg-slate-900 border border-amber-400/20 text-white rounded-xl h-9 px-3 focus:outline-none focus:border-amber-400"
                       >
+                        <option value="General Surgery Instruments (Operating Suite)">General Surgery Instruments (Operating Suite)</option>
+                        <option value="Dental Surgery & Hygiene Instruments">Dental Surgery & Hygiene Instruments</option>
+                        <option value="Eye / Ophthalmic Microsurgery Cutlery">Eye / Ophthalmic Microsurgery Cutlery</option>
                         <option value="Eyelash Tweezers & Volume Tools">Eyelash Tweezers & Volume Tools</option>
                         <option value="Manicure, Cuticle Nippers & Russian Scissors">Manicure, Cuticle Nippers & Russian Scissors</option>
                         <option value="Hair & Barber Shears 440C">Hair & Barber Shears 440C</option>
                         <option value="Damascus Straight Razors & Shavettes">Damascus Straight Razors & Shavettes</option>
-                        <option value="Dermatology & Extraction Tools">Dermatology & Extraction Tools</option>
-                        <option value="Full Salon Setup Bundle">Full Salon Setup Bundle</option>
+                        <option value="Hospital & Clinic Supply Tender">Hospital & Clinic Supply Tender</option>
                         <option value="Custom OEM Brand Manufacturing">Custom OEM Brand Manufacturing</option>
                       </select>
                     </div>

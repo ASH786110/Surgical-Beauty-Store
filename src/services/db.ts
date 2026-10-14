@@ -124,7 +124,7 @@ const initialAdmins: AdminUser[] = [
 // STORAGE KEYS
 const STORAGE_KEYS = {
   CLIENTS: "ash_db_clients_v1",
-  PRODUCTS: "ash_db_products_v6",
+  PRODUCTS: "ash_db_products_v8",
   ADMINS: "ash_db_admins_v1",
 }
 
@@ -151,17 +151,22 @@ class DatabaseEngine {
         const parsed: ProductRecord[] = JSON.parse(storedProducts)
         const parsedMap = new Map(parsed.map((p) => [p.id, p]))
 
-        // Keep fresh images, sizes, and pricing for default catalog products while retaining any custom items
+        // Keep fresh images, sizes, departments, and pricing for default catalog products while retaining any custom items
         const syncedDefaults = BEAUTY_INSTRUMENTS.map((defaultItem) => {
           const custom = parsedMap.get(defaultItem.id)
           if (!custom) return defaultItem
           return {
             ...custom,
+            category: defaultItem.category,
+            department: defaultItem.department,
             image: defaultItem.image,
             size: defaultItem.size,
             weight: defaultItem.weight,
             qualityGrade: defaultItem.qualityGrade,
-            msrpPrice: custom.msrpPrice || defaultItem.msrpPrice,
+            msrpPrice: defaultItem.msrpPrice,
+            price: defaultItem.price,
+            wholesalePrice: defaultItem.wholesalePrice,
+            specifications: defaultItem.specifications,
           }
         })
 

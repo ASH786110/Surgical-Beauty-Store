@@ -49,8 +49,10 @@ export default function App() {
         ) : currentView === "product-detail" && selectedProduct ? (
           /* VIEW 2: DEDICATED PRODUCT DETAIL VIEW WITH WHOLESALE TIERS & CUSTOM LASER SIMULATOR */
           <>
-            <TopUrgencyBar />
-            <Navbar />
+            <div className="sticky top-0 z-50 w-full shadow-lg shadow-black/50 backdrop-blur-xl bg-[#080c16]/98 border-b border-amber-500/15">
+              <TopUrgencyBar />
+              <Navbar />
+            </div>
             <ProductDetailView
               product={selectedProduct}
               onBack={handleBackToStore}
@@ -66,15 +68,11 @@ export default function App() {
               <SmokeMistEffect density="medium" tint="luxury" interactive={true} />
             </div>
 
-            {/* Top Factory Status Bar */}
-            <div className="relative z-30">
+            {/* Permanent Fixed / Sticky Top Header with ASH INSTRUMENTS Wordmark */}
+            <header className="sticky top-0 z-50 w-full shadow-lg shadow-black/50 backdrop-blur-xl bg-[#080c16]/98 border-b border-amber-500/15">
               <TopUrgencyBar />
-            </div>
-
-            {/* Navigation Bar with Direct WhatsApp & Bag Tray */}
-            <div className="relative z-20">
               <Navbar />
-            </div>
+            </header>
 
             <main className="relative z-10">
               {/* Hero Section with Interactive Spotlight, Gleam & WhatsApp Buy */}

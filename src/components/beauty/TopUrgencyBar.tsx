@@ -17,12 +17,12 @@ export default function TopUrgencyBar() {
         <div className="flex items-center gap-2.5">
           <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="font-semibold text-white tracking-wide text-[11px]">
-            Sialkot Cutlery Atelier · Direct Factory Export Rates
+            ASH Instruments Sialkot · Direct Surgical, Dental & Beauty Export Rates
           </span>
           <span className="hidden md:inline-block text-amber-500/30">|</span>
           <span className="hidden md:inline-flex items-center gap-1.5 text-[11px] text-amber-200/80">
             <Globe2 className="h-3 w-3 text-amber-400" />
-            Supplying Salons & Academies in UK, USA, UAE & Europe
+            Supplying Hospitals, Clinics & Academies Worldwide (UK, USA, UAE, EU)
           </span>
         </div>
 

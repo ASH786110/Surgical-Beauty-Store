@@ -125,11 +125,16 @@ export default function ProductDetailView({ product, onBack }: ProductDetailView
               {/* Official Pricing & Bulk Trade Discount Grid */}
               <div className="mt-4 grid grid-cols-3 gap-3">
                 <div className={`p-3 rounded-xl border transition-all ${qty < 10 ? "bg-white/10 border-white/30" : "bg-white/[0.03] border-white/[0.08]"}`}>
-                  <div className="text-[10px] text-slate-400 font-semibold uppercase">1–9 pcs (Single)</div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] text-slate-400 font-semibold uppercase">1–9 pcs (Single)</span>
+                    <span className="line-through text-[11px] text-slate-500 font-mono">${product.msrpPrice.toFixed(2)}</span>
+                  </div>
                   <div className="text-xl font-black font-mono text-white mt-1">
                     ${product.price.toFixed(2)}
                   </div>
-                  <div className="text-[10px] text-slate-400 mt-0.5">Official List Price</div>
+                  <div className="text-[10px] text-emerald-400 font-semibold mt-0.5">
+                    Save {Math.round(((product.msrpPrice - product.price) / product.msrpPrice) * 100)}% Factory Discount
+                  </div>
                 </div>
 
                 <div className={`p-3 rounded-xl border transition-all ${qty >= 10 && qty < 50 ? "bg-white/10 border-emerald-500/50" : "bg-white/[0.03] border-white/[0.08]"}`}>
@@ -138,7 +143,7 @@ export default function ProductDetailView({ product, onBack }: ProductDetailView
                     ${wholesale10.toFixed(2)}
                   </div>
                   <div className="text-[10px] text-emerald-400/80 font-semibold mt-0.5">
-                    Save {Math.round(((product.price - wholesale10) / product.price) * 100)}% / unit
+                    Save {Math.round(((product.msrpPrice - wholesale10) / product.msrpPrice) * 100)}% / unit
                   </div>
                 </div>
 
@@ -148,7 +153,7 @@ export default function ProductDetailView({ product, onBack }: ProductDetailView
                     ${wholesale50.toFixed(2)}
                   </div>
                   <div className="text-[10px] text-amber-300/80 font-semibold mt-0.5">
-                    Save {Math.round(((product.price - wholesale50) / product.price) * 100)}% + Free Logo
+                    Save {Math.round(((product.msrpPrice - wholesale50) / product.msrpPrice) * 100)}% + Free Logo
                   </div>
                 </div>
               </div>

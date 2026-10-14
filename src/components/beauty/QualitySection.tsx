@@ -20,10 +20,10 @@ export default function QualitySection() {
               <span>Manufacturer Metallurgical Craft</span>
             </div>
             <h2 className="mt-2 text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-              Why top lash artists & salon academies trust <span className="gold-gradient-text">ASH Instruments</span>
+              Why surgeons, dental clinics & master artists trust <span className="gold-gradient-text">ASH Instruments</span>
             </h2>
             <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
-              Askari Surgical Hubs combines decades of artisanal metallurgical expertise with modern CNC tolerance grinding and premium consumer cutlery finishing. 100% compliant for direct salon, barber, and retail distribution without medical device regulatory roadblocks.
+              Askari Surgical Hubs combines decades of Sialkot metallurgical forging heritage with modern CNC tolerance grinding and surgical passivation. From hospital operating suites and dental surgeries to premier beauty academies, our instruments are manufactured to international export standards.
             </p>
 
             <div className="mt-8 space-y-3.5">
@@ -135,16 +135,17 @@ export default function QualitySection() {
                 </div>
               </div>
 
-              {/* Universal Customs & Non-Medical Clearance Badge */}
+              {/* Dual Export Compliance Badge */}
               <div className="mt-8 p-4 rounded-xl bg-slate-900/80 border border-amber-400/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-xs font-bold text-amber-200">100% Non-Medical Universal Direct Import</div>
-                  <div className="text-[11px] text-slate-300 mt-0.5">
-                    Zero FDA / MDR CE Medical Permit Barriers · Fast Direct Tracked Air Delivery (HS Codes 8213 / 8214)
+                  <div className="text-xs font-bold text-amber-200">Export Certified & Dual Regulatory Compliance</div>
+                  <div className="text-[11px] text-slate-300 mt-0.5 leading-relaxed">
+                    <strong>Surgical, Dental & Ophthalmic:</strong> DIN EN ISO 13485 & CE Operating Standards (HS 9018)<br />
+                    <strong>Beauty & Barber Cutlery:</strong> Universal Direct Salon Clearance without medical red tape (HS 8203/8214)
                   </div>
                 </div>
                 <span className="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-2.5 py-1 rounded shrink-0">
-                  DIRECT CUSTOMS CLEARANCE
+                  ISO 13485 & CE READY
                 </span>
               </div>
             </div>

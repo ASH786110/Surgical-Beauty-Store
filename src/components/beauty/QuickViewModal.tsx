@@ -84,18 +84,23 @@ export default function QuickViewModal({ instrument, onClose }: QuickViewModalPr
                 </span>
               </div>
 
-              {/* Tier Pricing Cards with Official Price and Bulk Discount */}
+              {/* Tier Pricing Cards with Official MSRP, Discounted Factory Price, and Bulk Discount */}
               <div className="mt-3.5 grid grid-cols-2 gap-2">
                 <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/10">
-                  <div className="text-[10px] text-slate-400 uppercase font-medium">Official 1 pc Price</div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] text-slate-400 uppercase font-medium">Factory Direct</span>
+                    <span className="line-through text-[11px] text-slate-500 font-mono">${instrument.msrpPrice.toFixed(2)}</span>
+                  </div>
                   <div className="text-lg font-bold font-mono text-white">${instrument.price.toFixed(2)}</div>
-                  <div className="text-[9px] text-slate-400">Single Unit Rate</div>
+                  <div className="text-[9px] text-emerald-400 font-semibold">
+                    Save {Math.round(((instrument.msrpPrice - instrument.price) / instrument.msrpPrice) * 100)}% Official Discount
+                  </div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-white/[0.03] border border-emerald-500/30">
                   <div className="text-[10px] text-emerald-400 uppercase font-semibold">10+ Bulk Order Rate</div>
                   <div className="text-lg font-bold font-mono text-emerald-400">${wholesale10.toFixed(2)} / pc</div>
                   <div className="text-[9px] text-emerald-400/90 font-medium">
-                    Save {Math.round(((instrument.price - wholesale10) / instrument.price) * 100)}% Trade Discount
+                    Commercial Wholesale Tier
                   </div>
                 </div>
               </div>
@@ -132,8 +137,12 @@ export default function QuickViewModal({ instrument, onClose }: QuickViewModalPr
                     </div>
                   )}
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Regulation:</span>
-                    <span className="text-emerald-400 font-medium text-[11px]">100% Non-Medical (Zero Permits)</span>
+                    <span className="text-slate-400">Standard:</span>
+                    <span className="text-emerald-400 font-medium text-[11px]">
+                      {instrument.department === "General Surgery" || instrument.department === "Dental Instruments" || instrument.department === "Eye / Ophthalmic"
+                        ? "DIN EN ISO 13485 & CE Operating Standard"
+                        : "Universal Direct Import Implements (HS 8203/8214)"}
+                    </span>
                   </div>
                 </div>
               </div>

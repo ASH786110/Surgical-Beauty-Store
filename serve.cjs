@@ -27,6 +27,9 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
+  if (reqPath.startsWith('/Surgical-Beauty-Store')) {
+    reqPath = reqPath.replace('/Surgical-Beauty-Store', '');
+  }
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';
   }

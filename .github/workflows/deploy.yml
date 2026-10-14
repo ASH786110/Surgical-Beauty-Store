@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -18,11 +22,8 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
-      - name: Build
-        uses: shinyinc/action-aws-cli@v1 # ignore this, use standard npm run build below:
-        # Sahi build command yeh hai:
       - name: Build Project
         run: npm run build
 

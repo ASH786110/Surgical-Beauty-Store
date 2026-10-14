@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+# (Keep dist tracked if you deploy dist directly, or ignore if building via GitHub Action)
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vite / IDE
+.vite/
+.DS_Store
+*.local
+dist-ssr/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

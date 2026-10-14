@@ -1,76 +1,90 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { Sparkles, Scissors, Eye, Heart, ArrowRight } from "lucide-react"
+import { Sparkles, ArrowRight } from "lucide-react"
 
 interface CategoryCard {
+  id: string
   title: string
   subtitle: string
-  icon: React.ComponentType<{ className?: string }>
+  icon: string
   featuredItems: string[]
   priceRange: string
   description: string
+  standard: string
 }
 
 const categories: CategoryCard[] = [
   {
-    title: "Lash & Brow Artistry",
-    subtitle: "Fiber-Tip & Micro-Isolation",
-    icon: Eye,
+    id: "General Surgery",
+    title: "General Surgery Instruments",
+    subtitle: "Operating Theater & Trauma Suite Grade",
+    icon: "🩺",
     featuredItems: [
-      "90° Mega Volume Fiber Tweezers",
-      "Russian Volume Boot Tweezers (Diamond Grip)",
-      "45° Curved Precision Isolation Tweezers",
-      "Hand-Honed 25° Slant Brow Tweezers",
+      "Mayo-Hegar Needle Holders (Gold TC Jaws)",
+      "Metzenbaum Dissecting Scissors (Curved TC)",
+      "DeBakey Cardiovascular Atraumatic Forceps",
+      "Allis Tissue Grasping Forceps 5x6 Teeth",
+      "Scalpel Handle #3 & #4 Ergonomic Set",
     ],
-    priceRange: "$11.50 – $18.50 (Wholesale from $7.50)",
+    priceRange: "From $18.00 – $44.00 (MSRP up to $58.00)",
     description:
-      "Engineered with laser micro-textured diamond fiber tips. Grips 0.03mm-0.07mm fans without dropping or splaying. Universal cosmetic import.",
+      "Engineered from certified German surgical grade stainless steel and bonded Tungsten Carbide. Validated for high-pressure Class B autoclave sterilization (134°C). Zero tissue damage with DeBakey micro atraumatic teeth.",
+    standard: "DIN EN ISO 13485 & CE Operating Standard",
   },
   {
-    title: "Manicure & Pedicure Nippers & Tools",
-    subtitle: "Precision Hand-Honed Cuticle Cutlery",
-    icon: Sparkles,
+    id: "Dental Instruments",
+    title: "Dental Instruments & Oral Surgery",
+    subtitle: "Clinical Extraction & Periodontal Hygiene",
+    icon: "🦷",
     featuredItems: [
-      "Russian Manicure Micro-Curved Razor Scissors",
-      "Cobalt 4mm Quarter-Jaw Nippers",
-      "Dual-Ended Cuticle Pusher & Spoon Curette",
-      "Heavy-Duty Barrel Spring Toenail Nippers",
+      "Universal Adult Extracting Forceps #150 / #151",
+      "Jaquette Sickle Scaler & Gracey Curettes (5-Pcs)",
+      "Rhodium HD Front-Surface Mouth Mirrors #5",
+      "Dental Luxating Elevators Stubby Tip (Straight & Curved)",
     ],
-    priceRange: "$9.50 – $26.50 (Wholesale from $5.80)",
+    priceRange: "From $16.50 – $58.00 (MSRP up to $78.00)",
     description:
-      "Forged surgical-grade stainless steel with smooth double-spring action for razor-clean cuticle trimming without pinching or pulling.",
+      "Crafted from cold-forged AISI 420 & 1.4021 surgical alloys. Ergonomically knurled non-slip handles prevent hand fatigue during prolonged scaling, elevation, and dental extractions.",
+    standard: "Thermodisinfector & 134°C Autoclave Safe",
   },
   {
-    title: "Professional Hair & Barber Cutlery",
-    subtitle: "Japanese 440C Cobalt & Damascus Steel",
-    icon: Scissors,
+    id: "Eye / Ophthalmic",
+    title: "Eye / Ophthalmic Microsurgery",
+    subtitle: "Micro-Tension & Delicate Corneal Cutlery",
+    icon: "👁️",
     featuredItems: [
-      "Master Damascus Folding Straight Razor",
-      "Titanium Swivel-Thumb Barber Shears 6.5\"",
-      "Japanese 440C Convex Cutting Shears 6.0\"",
-      "30-Tooth Soft Blending Thinning Shears",
+      "Castroviejo Micro Needle Holders (TC Straight 14cm)",
+      "Iris Micro-Surgical Scissors (Curved 11.5cm)",
+      "Castroviejo Ophthalmic Suturing Forceps 1x2 Teeth (0.12mm)",
+      "Barraquer Wire Eye Speculum (Adult 14mm)",
     ],
-    priceRange: "$16.50 – $49.00 (Wholesale from $11.00)",
+    priceRange: "From $21.00 – $68.00 (MSRP up to $89.00)",
     description:
-      "Hamaguri convex clam-shell blades and forged Damascus steel honed to surgical sharpness for effortless haircutting and wet shaving.",
+      "Delicate micro-instruments calibrated under stereo optical microscopes for corneal, cataract, and vitreoretinal surgery. Non-glare satin matte finish prevents optical reflection under operating microscopes.",
+    standard: "Zero Tremor Spring Balance · Micro-Precision",
   },
   {
-    title: "Esthetic Skincare & Derm Grooming",
-    subtitle: "Clinical Pore & Blemish Tools",
-    icon: Heart,
+    id: "Beauty & Salon",
+    title: "Beauty & Salon Precision Cutlery",
+    subtitle: "Master Artisan Export Cutlery Atelier",
+    icon: "✂️",
     featuredItems: [
-      "Double-Ended Comedone Extractors",
-      "Esthetic Dermal Loop Curettes",
-      "Micro-Derm Skin Scraper Implements",
+      "90° Fiber-Tip Mega Volume Eyelash Tweezers",
+      "Pro-Grade Cobalt Cuticle Nippers 4mm (Quarter Jaw)",
+      "Japanese 440C Convex Edge Salon Hair Shears 6.0\"",
+      "Master Damascus Folding Barber Straight Razor",
+      "Russian Manicure Micro-Curved Scissors 21mm",
     ],
-    priceRange: "$12.50 – $15.00 (Wholesale from $7.90)",
+    priceRange: "From $17.50 – $139.00 (MSRP up to $185.00)",
     description:
-      "Passivated stainless steel implements for hygienic clinic facials, blackhead extraction, and micro-exfoliation with knurled grips.",
+      "Ultra-fine micro-textured diamond fiber tips, hand-honed convex razor shears, and Damascus steel shavettes. Universal export classification (HS 8203/8214) with zero regulatory import hurdles.",
+    standard: "Japanese Hitachi 440C & Cryo Hardened",
   },
 ]
 
 export default function CategoriesShowcase() {
-  const scrollToCatalog = () => {
+  const handleSelectCategory = (categoryId: string) => {
+    window.dispatchEvent(new CustomEvent("ash-filter-category", { detail: categoryId }))
     const el = document.getElementById("catalog")
     if (el) el.scrollIntoView({ behavior: "smooth" })
   }
@@ -81,22 +95,21 @@ export default function CategoriesShowcase() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 tracking-wider uppercase">
             <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-            <span>Specialized Instrument Lines</span>
+            <span>Dedicated Manufacturing Divisions</span>
           </div>
           <h2 className="mt-2 text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Precision instruments for salons, academies & artists
+            Four Specialized Instrument Divisions
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
-            Every tool is engineered with balanced center-of-gravity, ergonomic finger contours, and durable passivated coatings to withstand daily autoclaving and clinic sanitization.
+            From hospital operating theaters and dental clinics to ophthalmic surgical microsuites and master beauty academies, ASH Instruments delivers certified surgical cutlery with direct factory warranties.
           </p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {categories.map((cat, i) => {
-            const Icon = cat.icon
             return (
               <motion.div
-                key={i}
+                key={cat.id}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
@@ -105,12 +118,13 @@ export default function CategoriesShowcase() {
                   delay: i * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="studio-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-400/35 transition-all"
+                className="studio-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-400/35 transition-all cursor-pointer"
+                onClick={() => handleSelectCategory(cat.id)}
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/10 text-amber-300 border border-amber-400/25 group-hover:bg-amber-400/15 group-hover:border-amber-400/40 transition-colors">
-                      <Icon className="h-6 w-6" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/10 text-2xl border border-amber-400/25 group-hover:bg-amber-400/15 group-hover:border-amber-400/40 transition-colors">
+                      {cat.icon}
                     </div>
                     <span className="text-xs font-mono font-bold text-amber-300 bg-amber-400/10 border border-amber-400/20 px-2.5 py-1 rounded-md">
                       {cat.priceRange}
@@ -130,7 +144,7 @@ export default function CategoriesShowcase() {
 
                   <div className="mt-5 pt-4 border-t border-white/[0.08]">
                     <div className="text-[11px] font-semibold uppercase text-slate-400 tracking-wider mb-2">
-                      Popular Master Models:
+                      Key Manufactured Models:
                     </div>
                     <ul className="space-y-1.5 text-xs text-slate-300">
                       {cat.featuredItems.map((item, idx) => (
@@ -144,12 +158,17 @@ export default function CategoriesShowcase() {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/[0.08] flex items-center justify-between">
-                  <span className="text-xs text-slate-400">German AISI 420 & Japanese 440C</span>
+                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded">
+                    {cat.standard}
+                  </span>
                   <button
-                    onClick={scrollToCatalog}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      handleSelectCategory(cat.id)
+                    }}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-amber-200 transition-colors"
                   >
-                    <span>View Models</span>
+                    <span>Browse Section</span>
                     <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
