@@ -71,7 +71,7 @@ export default function AdminControlPanel({
     price: 15.0,
     wholesalePrice: 9.5,
     inStock: true,
-    image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+    image: "./images/hero_ash_instruments_tray_1791532125541.jpg",
     description: "",
     bladeOrTip: "Micro-fine calibrated tip",
     hardnessRating: "HRC 50",
@@ -108,6 +108,14 @@ export default function AdminControlPanel({
         ref: productForm.ref,
         name: productForm.name,
         category: productForm.category,
+        department:
+          productForm.category === "General Surgery"
+            ? "General Surgery"
+            : productForm.category === "Dental Instruments"
+            ? "Dental Instruments"
+            : productForm.category === "Eye / Ophthalmic"
+            ? "Eye / Ophthalmic"
+            : "Beauty & Salon",
         alloy: productForm.alloy,
         finish: productForm.finish,
         price: Number(productForm.price),
@@ -128,6 +136,14 @@ export default function AdminControlPanel({
         ref: productForm.ref,
         name: productForm.name,
         category: productForm.category,
+        department:
+          productForm.category === "General Surgery"
+            ? "General Surgery"
+            : productForm.category === "Dental Instruments"
+            ? "Dental Instruments"
+            : productForm.category === "Eye / Ophthalmic"
+            ? "Eye / Ophthalmic"
+            : "Beauty & Salon",
         alloy: productForm.alloy,
         finish: productForm.finish,
         msrpPrice: Number(productForm.msrpPrice || Number(productForm.price) * 2.2),
@@ -233,7 +249,7 @@ export default function AdminControlPanel({
 
           <div className="flex items-center gap-2.5 pl-3 border-l border-slate-800">
             <img
-              src="/src/assets/images/logo_ash_instruments_1791532110951.jpg"
+              src="./images/logo_ash_instruments_1791532110951.jpg"
               alt="ASH Instruments Logo"
               className="h-8 w-8 rounded-full border border-slate-700 object-cover"
             />
@@ -429,7 +445,7 @@ export default function AdminControlPanel({
                       price: 16.0,
                       wholesalePrice: 10.0,
                       inStock: true,
-                      image: "/src/assets/images/hero_ash_instruments_tray_1791532125541.jpg",
+                      image: "./images/hero_ash_instruments_tray_1791532125541.jpg",
                       description: "Official laser-engraved ASH Instruments precision cutlery.",
                       bladeOrTip: "Hand-calibrated precision tip",
                       hardnessRating: "HRC 50",

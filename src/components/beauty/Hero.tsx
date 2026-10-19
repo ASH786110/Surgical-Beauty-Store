@@ -33,7 +33,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 44.0,
     salonPrice: 38.0,
     wholesalePrice: 34.0,
-    image: "./src/assets/images/product_micro_needle_holder_1791527347532.jpg",
+    image: "./images/product_micro_needle_holder_1791527347532.jpg",
     quote: "Official hospital operating theater grade. Pyramid cross-serrated Tungsten Carbide jaws with ratchet lock for zero suture slippage. ISO 13485 & CE certified.",
     waText: "Hello ASH Instruments, I want to order the Mayo-Hegar TC Needle Holder (REF: ASH-SURG-001) at official factory export rates.",
   },
@@ -48,24 +48,24 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 46.0,
     salonPrice: 40.0,
     wholesalePrice: 36.0,
-    image: "./src/assets/images/product_cuticle_nippers_1791528938526.jpg",
+    image: "./images/dental_surgical_instruments_1791963309346.jpg",
     quote: "Precision dental extraction cutlery. Deep anatomical beak cross-serrations maximize root contact while preserving alveolar bone architecture.",
     waText: "Hello ASH Instruments, I want to order the Dental Extraction Forceps #150 (REF: ASH-DENT-101) at official factory rates.",
   },
   {
-    id: "eye-castro",
+    id: "eye-iris",
     ref: "ASH-EYE-201",
-    name: "Castroviejo Micro Needle Holder (TC Straight 14cm)",
+    name: "Iris Micro-Surgical Scissors (Curved 11.5cm Sharp/Sharp)",
     department: "Eye / Ophthalmic",
-    alloy: "German Stainless + Micro TC Jaws",
-    finish: "Delicate Catch Lock & Gold Plating (140mm)",
-    msrpPrice: 89.0,
-    samplePrice: 68.0,
-    salonPrice: 58.0,
-    wholesalePrice: 52.0,
-    image: "./src/assets/images/product_ash_cuticle_nippers_1791531992141.jpg",
-    quote: "Ophthalmic microsurgical standard for 6-0 down to 10-0 corneal sutures. Ultra-fine Tungsten Carbide inserts with feather-touch catch mechanism.",
-    waText: "Hello ASH Instruments, I want to order the Castroviejo Micro Needle Holder (REF: ASH-EYE-201) at official factory rates.",
+    alloy: "Hardened German Inox Steel",
+    finish: "Satin Non-Glare Hand-Honed Sharp/Sharp (115mm)",
+    msrpPrice: 42.0,
+    samplePrice: 32.0,
+    salonPrice: 28.0,
+    wholesalePrice: 24.5,
+    image: "./images/ash_scissors_realistic_1791623595411.jpg",
+    quote: "Delicate micro-surgical Iris scissors featuring ultra-sharp 0.2mm needle points and hand-lapped blades for clean ophthalmic incisions without tissue pulling.",
+    waText: "Hello ASH Instruments, I want to order the Iris Micro Scissors (REF: ASH-EYE-201) at official factory rates.",
   },
   {
     id: "lash",
@@ -78,7 +78,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 36.0,
     salonPrice: 32.0,
     wholesalePrice: 28.0,
-    image: "./src/assets/images/ash_lash_realistic_1791623278329.jpg",
+    image: "./images/ash_lash_realistic_1791623278329.jpg",
     quote: "Original ASH Instruments laser engraved 90° tweezers. Micro-textured diamond fiber sweet-spot grabs 0.03mm Russian volume fans with zero slippage.",
     waText: "Hello ASH Instruments, I want to order the 90° Fiber-Tip Mega Volume Tweezers (REF: ASH-LASH-090) at official export rates.",
   },
@@ -93,7 +93,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 33.0,
     salonPrice: 29.0,
     wholesalePrice: 26.0,
-    image: "./src/assets/images/ash_nipper_realistic_1791623359819.jpg",
+    image: "./images/ash_nipper_realistic_1791623359819.jpg",
     quote: "Hand-honed beveled razor edge aligned under 20x stereo microscope for surgical clean trimming with zero skin pinching.",
     waText: "Hello ASH Instruments, I want to order the Pro Cobalt Cuticle Nipper 4mm (REF: ASH-MANI-404) at official export rates.",
   },
@@ -108,7 +108,7 @@ const SPOTLIGHT_ITEMS: HeroSpotlight[] = [
     samplePrice: 139.0,
     salonPrice: 125.0,
     wholesalePrice: 110.0,
-    image: "./src/assets/images/ash_shears_realistic_1791623537885.jpg",
+    image: "./images/ash_shears_realistic_1791623537885.jpg",
     quote: "Titanium black nitride molecular PVD coating with 360° rotating ergonomic thumb ring and jeweled tension pivot.",
     waText: "Hello ASH Instruments, I want to order the Titanium Swivel Barber Shears 6.5\" (REF: ASH-HAIR-750) at official export rates.",
   },
@@ -139,7 +139,7 @@ export default function Hero() {
       {/* Background High-End Studio Presentation */}
       <div className="absolute inset-0 z-0">
         <img
-          src="./src/assets/images/hero_ash_instruments_tray_1791532125541.jpg"
+          src="./images/hero_ash_instruments_tray_1791532125541.jpg"
           alt="Authentic surgical-grade instruments on stainless inspection tray"
           className="h-full w-full object-cover object-center opacity-20"
           referrerPolicy="no-referrer"
@@ -163,7 +163,7 @@ export default function Hero() {
             {/* Atelier Hallmark Badge */}
             <div className="inline-flex items-center gap-3 py-1.5 px-3.5 rounded-full border border-amber-400/25 bg-amber-400/[0.06] backdrop-blur-md mb-6 shadow-sm">
               <img
-                src="/src/assets/images/logo_ash_instruments_1791532110951.jpg"
+                src="./images/logo_ash_instruments_1791532110951.jpg"
                 alt="ASH Instruments Official Emblem"
                 className="h-6 w-6 rounded-full border border-amber-400/40 object-cover"
               />

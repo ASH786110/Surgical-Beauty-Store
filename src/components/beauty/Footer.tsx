@@ -22,7 +22,7 @@ export default function Footer({ onOpenAdmin }: FooterProps) {
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-3">
               <img
-                src="/src/assets/images/logo_ash_instruments_1791532110951.jpg"
+                src="./images/logo_ash_instruments_1791532110951.jpg"
                 alt="ASH Instruments Official Logo"
                 className="h-10 w-10 rounded-full border border-amber-400/40 object-cover shadow-sm"
               />

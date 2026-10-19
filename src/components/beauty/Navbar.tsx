@@ -46,7 +46,7 @@ export default function Navbar({ onOpenAdmin }: NavbarProps) {
         >
           <div className="relative">
             <img
-              src="/src/assets/images/logo_ash_instruments_1791532110951.jpg"
+              src="./images/logo_ash_instruments_1791532110951.jpg"
               alt="ASH Instruments Official Logo"
               className="h-10 w-10 rounded-full border border-amber-400/40 object-cover transition-transform duration-200 group-hover:scale-105 shadow-sm"
             />

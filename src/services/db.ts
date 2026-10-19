@@ -124,7 +124,7 @@ const initialAdmins: AdminUser[] = [
 // STORAGE KEYS
 const STORAGE_KEYS = {
   CLIENTS: "ash_db_clients_v1",
-  PRODUCTS: "ash_db_products_v9",
+  PRODUCTS: "ash_db_products_v10",
   ADMINS: "ash_db_admins_v1",
 }
 
